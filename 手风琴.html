@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		div{
+			width: 300px;
+			height: 600px;
+			margin:10px auto;
+		}
+		dl dt{
+			line-height: 30px;
+			background: skyblue;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<dl>
+			<dt>学院</dt>
+			<dd>传媒</dd>
+			<dd>软工</dd>
+			<dd>网站</dd>
+		</dl>
+		<dl>
+			<dt>学院</dt>
+			<dd>传媒</dd>
+			<dd>软工</dd>
+			<dd>网站</dd>
+		</dl>
+		<dl>
+			<dt>学院</dt>
+			<dd>传媒</dd>
+			<dd>软工</dd>
+			<dd>网站</dd>
+		</dl>
+	</div>
+	<script src='jquery-1.8.3.min.js'></script>
+	<script>
+		$(function(){
+			$('dl dd').hide()
+			$('dl dt').click(function(){
+				$(this).siblings().show(1000).parent().siblings().find('dd').hide(1000)
+			})
+		})
+	</script>
+</body>
+</html>
